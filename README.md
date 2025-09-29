@@ -1,7 +1,3 @@
-Aqui está um **README.md detalhado** que você pode usar no GitHub para o seu microserviço de autenticação:
-
----
-
 # 🔐 Auth Microservice — JWT + OAuth2 (Node.js + Express)
 
 Microserviço de autenticação seguro e reutilizável, implementado com **JWT** e **OAuth2 (Google)**.
@@ -154,31 +150,3 @@ app.get('/profile', verifyToken, (req, res) => {
   res.json({ user: req.user });
 });
 ```
-
----
-
-## 📸 Prints (exemplo)
-
-* ✅ Registro/Login
-* ✅ Tokens JWT gerados
-* ✅ Integração com Google OAuth2
-
-*(adicione suas screenshots aqui)*
-
----
-
-## 🧩 Futuras Melhorias
-
-* Suporte a Facebook/GitHub OAuth
-* Integração com Redis para blacklist de tokens
-* Painel de administração
-
----
-
-## 📄 Licença
-
-Projeto sob licença **MIT**. Livre para uso e modificação.
-
----
-
-Quer que eu já gere as **screenshots simuladas em formato PNG** (fluxo de login, tokens no Postman, diagrama da arquitetura) para você adicionar direto no README?
