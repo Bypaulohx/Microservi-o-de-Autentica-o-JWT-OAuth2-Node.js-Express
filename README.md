@@ -1,4 +1,4 @@
-# 🔐 Auth Microservice — JWT + OAuth2 (Node.js + Express)
+# Auth Microservice — JWT + OAuth2 (Node.js + Express)
 
 Microserviço de autenticação seguro e reutilizável, implementado com **JWT** e **OAuth2 (Google)**.
 Inclui suporte a **tokens de acesso e refresh**, integração com **Prisma + PostgreSQL**, pronto para rodar em **Docker**.
@@ -7,7 +7,7 @@ Ideal para ser integrado em outros sistemas que precisem de autenticação centr
 
 ---
 
-## 🚀 Funcionalidades
+## Funcionalidades
 
 * Registro e login de usuários com email e senha (hash com **bcrypt**)
 * Autenticação com **Google OAuth2** via `passport-google-oauth20`
@@ -19,23 +19,23 @@ Ideal para ser integrado em outros sistemas que precisem de autenticação centr
 
 ---
 
-## 🏗️ Arquitetura
+## Arquitetura
 
 ```
 auth-microservice/
-│── prisma/              # Configuração do Prisma ORM
+│── prisma/           
 │   └── schema.prisma
 │── src/
-│   ├── index.js         # Entry point
-│   ├── app.js           # Configuração do Express
-│   ├── prisma.js        # Cliente Prisma
+│   ├── index.js      
+│   ├── app.js     
+│   ├── prisma.js 
 │   ├── routes/
-│   │   └── auth.js      # Rotas de autenticação
-│   ├── controllers/     # Regras de negócio
+│   │   └── auth.js 
+│   ├── controllers/ 
 │   ├── services/
-│   │   ├── jwt.js       # Geração/validação de JWT
-│   │   └── passport.js  # Estratégias OAuth2
-│── .env.example         # Variáveis de ambiente
+│   │   ├── jwt.js 
+│   │   └── passport.js 
+│── .env.example
 │── package.json
 │── Dockerfile
 │── docker-compose.yml
@@ -44,7 +44,7 @@ auth-microservice/
 
 ---
 
-## ⚙️ Pré-requisitos
+## Pré-requisitos
 
 * [Node.js 18+](https://nodejs.org)
 * [PostgreSQL 15+](https://www.postgresql.org/)
@@ -52,7 +52,7 @@ auth-microservice/
 
 ---
 
-## 📥 Instalação
+## Instalação
 
 Clone o repositório e instale as dependências:
 
@@ -72,7 +72,7 @@ Ajuste as variáveis de ambiente (como `DATABASE_URL`, `JWT_SECRET`, `GOOGLE_CLI
 
 ---
 
-## 🛠️ Banco de Dados
+## Banco de Dados
 
 Rodar as migrações do Prisma:
 
@@ -82,7 +82,7 @@ npx prisma migrate dev
 
 ---
 
-## ▶️ Uso (Modo Dev)
+## Uso (Modo Dev)
 
 Inicie o servidor local:
 
@@ -91,11 +91,11 @@ npm run dev
 ```
 
 O serviço ficará disponível em:
-👉 `http://localhost:4000`
+ `http://localhost:4000`
 
 ---
 
-## 🐳 Uso com Docker
+## Uso com Docker
 
 Subir o serviço com Postgres + App:
 
@@ -105,7 +105,7 @@ docker-compose up --build
 
 ---
 
-## 🔑 Rotas Principais
+## Rotas Principais
 
 ### `POST /auth/register`
 
@@ -139,7 +139,7 @@ Callback do Google.
 
 ---
 
-## 🔒 Protegendo Rotas
+## Protegendo Rotas
 
 Exemplo de rota protegida no Express:
 
